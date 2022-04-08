@@ -1,12 +1,12 @@
 import React from "react";
 import Navigation from "./Navigation";
 
-const Layout: React.FC = () => {
+const Layout: React.FC = ({ children }) => {
   return (
-    <React.Fragment>
-      <h1>MC</h1>
+    <div>
       <Navigation />
-    </React.Fragment>
+      <main>{children}</main>
+    </div>
   );
 };
 
