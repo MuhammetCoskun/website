@@ -3,7 +3,7 @@ import Navigation from "./Navigation";
 
 const Layout: React.FC = ({ children }) => {
   return (
-    <div>
+    <div style={{ marginLeft: "100px" }}>
       <Navigation />
       <main>{children}</main>
     </div>
