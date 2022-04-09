@@ -31,7 +31,7 @@ const ResponsiveNavBar = () => {
       color="transparent"
       sx={{ marginTop: "20px", boxShadow: "none" }}
     >
-      <Container maxWidth="xl">
+      <Container maxWidth="xl" sx={{ mx: 0, px: 0 }}>
         <Toolbar disableGutters>
           <Typography
             variant="h4"
@@ -100,7 +100,9 @@ const ResponsiveNavBar = () => {
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: "black", display: "block" }}
               >
-                <Typography variant="h5">{page}</Typography>
+                <Typography variant="h5">
+                  <strong>{page}</strong>
+                </Typography>
               </Button>
             ))}
           </Box>

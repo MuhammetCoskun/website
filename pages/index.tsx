@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 
 const Home: NextPage = () => {
   return (
@@ -15,16 +15,16 @@ const Home: NextPage = () => {
           display: "flex",
           justifyContent: "flex-start",
           marginTop: "300px",
+          pl: 3,
         }}
       >
-        <h1>Hi, Im Muhammet Coskun!</h1>
-      </Box>
-      {/* <div style={{ margin: "400px" }}>
-        <h1 style={{ fontSize: "64px" }}>
-          <strong>Hi, Im Muhammet Coskun!</strong>
+        <h1 style={{ fontSize: "50px" }}>
+          <strong>Hi, I am Muhammet Coskun!</strong>
         </h1>
-        <h2 style={{ fontSize: "32px" }}>Front-end web developer.</h2>
-      </div> */}
+      </Box>
+      <Box sx={{ pl: 3 }}>
+        <p style={{ fontSize: "35px" }}>Front-end web developer.</p>
+      </Box>
     </div>
   );
 };
