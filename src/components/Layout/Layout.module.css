@@ -7,4 +7,5 @@
 .content-wrap {
   margin: 0 10%;
   flex: 1;
+  padding-inline: 24px;
 }

@@ -8,10 +8,18 @@ const Footer: React.FC = () => {
     <div className={classes["main-footer"]}>
       <div className={classes.container}>
         <div className={classes.row}>
-          <a href="#">
+          <a
+            href="https://github.com/MuhammetCoskun"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <GitHubIcon />
           </a>
-          <a href="#">
+          <a
+            href="https://www.linkedin.com/in/muhammet-co%C5%9Fkun-398961221/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <LinkedInIcon />
           </a>
         </div>
