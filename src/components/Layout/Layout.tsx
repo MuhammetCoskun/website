@@ -1,11 +1,16 @@
 import React from "react";
-import Navigation from "./Navigation";
+import Header from "./Header";
+import Footer from "./Footer";
+import classes from "./Layout.module.css";
 
 const Layout: React.FC = ({ children }) => {
   return (
-    <div style={{ margin: "0 10%" }}>
-      <Navigation />
-      <main>{children}</main>
+    <div className={classes["page-container"]}>
+      <div className={classes["content-wrap"]}>
+        <Header />
+        <main>{children}</main>
+      </div>
+      <Footer />
     </div>
   );
 };

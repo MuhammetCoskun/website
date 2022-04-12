@@ -1,7 +1,7 @@
 import React from "react";
 import ResponsiveNavBar from "../UI/NavBar";
 
-const Navigation: React.FC = () => {
+const Header: React.FC = () => {
   return (
     <header>
       <ResponsiveNavBar />
@@ -9,4 +9,4 @@ const Navigation: React.FC = () => {
   );
 };
 
-export default Navigation;
+export default Header;
