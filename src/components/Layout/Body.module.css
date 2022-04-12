@@ -1,0 +1,28 @@
+.main-body {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 80%;
+  padding-inline: 24px;
+  height: 65vh;
+}
+.main-body h1 {
+  animation: h1andp-appear 1.5s ease-out forwards;
+}
+
+.main-body p {
+  font-size: 2.5rem;
+  animation: h1andp-appear 2s ease-in forwards;
+}
+
+@keyframes h1andp-appear {
+  from {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}
