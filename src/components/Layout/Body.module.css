@@ -3,7 +3,6 @@
   justify-content: flex-start;
   align-items: center;
   height: 80%;
-  padding-inline: 24px;
   height: 65vh;
 }
 .main-body h1 {
@@ -12,7 +11,7 @@
 
 .main-body p {
   font-size: 2.5rem;
-  animation: h1andp-appear 2s ease-in forwards;
+  animation: h1andp-appear 2s ease-out forwards;
 }
 
 @keyframes h1andp-appear {

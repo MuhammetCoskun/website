@@ -9,8 +9,13 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
+import Link from "next/link";
 
 const pages = ["About", "Projects", "Contact"];
+
+const lowerCaseFirstLetter = (s: string): string => {
+  return s.charAt(0).toLowerCase() + s.slice(1);
+};
 
 const ResponsiveNavBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
@@ -31,25 +36,35 @@ const ResponsiveNavBar = () => {
       color="transparent"
       sx={{ marginTop: "20px", boxShadow: "none" }}
     >
-      <Container maxWidth="xl" sx={{ mx: 0, px: 0 }}>
+      <Container maxWidth="xl" sx={{ mx: 0, px: 0 }} disableGutters={true}>
         <Toolbar disableGutters>
-          <Typography
-            variant="h4"
-            noWrap
-            component="div"
-            sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
+          <Button
+            sx={{ my: 2, color: "black", display: { xs: "none", md: "flex" } }}
           >
-            MC
-          </Typography>
-          <Typography
-            variant="h4"
-            noWrap
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
+            <Link href="/" passHref={true}>
+              <Typography variant="h4" noWrap component="div">
+                MC
+              </Typography>
+            </Link>
+          </Button>
+
+          <Button
+            sx={{ my: 2, color: "black", display: { xs: "flex", md: "none" } }}
           >
-            MC
-          </Typography>
-          <Box sx={{ flexGrow: 0, display: { xs: "flex", md: "none" } }}>
+            <Link href="/" passHref={true}>
+              <Typography variant="h4" noWrap component="div">
+                MC
+              </Typography>
+            </Link>
+          </Button>
+
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: "flex", md: "none" },
+              justifyContent: "end",
+            }}
+          >
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -80,7 +95,9 @@ const ResponsiveNavBar = () => {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                  <Link href={`/${lowerCaseFirstLetter(page)}`} passHref={true}>
+                    <Typography textAlign="center">{page}</Typography>
+                  </Link>
                 </MenuItem>
               ))}
             </Menu>
@@ -100,9 +117,11 @@ const ResponsiveNavBar = () => {
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: "black", display: "block" }}
               >
-                <Typography variant="h5">
-                  <strong>{page}</strong>
-                </Typography>
+                <Link href={`/${lowerCaseFirstLetter(page)}`} passHref={true}>
+                  <Typography variant="h5">
+                    <strong>{page}</strong>
+                  </Typography>
+                </Link>
               </Button>
             ))}
           </Box>
