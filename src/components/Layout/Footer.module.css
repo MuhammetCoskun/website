@@ -18,3 +18,9 @@
 .row a {
   margin-inline: 1rem;
 }
+
+.row a:hover,
+.row a:active,
+.row a.active {
+  color: #712b75;
+}

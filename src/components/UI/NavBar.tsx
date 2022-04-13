@@ -39,7 +39,14 @@ const ResponsiveNavBar = () => {
       <Container maxWidth="xl" sx={{ mx: 0, px: 0 }} disableGutters={true}>
         <Toolbar disableGutters>
           <Button
-            sx={{ my: 2, color: "black", display: { xs: "none", md: "flex" } }}
+            sx={{
+              my: 2,
+              color: "black",
+              display: { xs: "none", md: "flex" },
+              ":hover": {
+                color: "#712B75",
+              },
+            }}
           >
             <Link href="/" passHref={true}>
               <Typography variant="h4" noWrap component="div">
@@ -49,7 +56,14 @@ const ResponsiveNavBar = () => {
           </Button>
 
           <Button
-            sx={{ my: 2, color: "black", display: { xs: "flex", md: "none" } }}
+            sx={{
+              my: 2,
+              color: "black",
+              display: { xs: "flex", md: "none" },
+              ":hover": {
+                color: "#712B75",
+              },
+            }}
           >
             <Link href="/" passHref={true}>
               <Typography variant="h4" noWrap component="div">
@@ -115,7 +129,14 @@ const ResponsiveNavBar = () => {
                 size="large"
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "black", display: "block" }}
+                sx={{
+                  my: 2,
+                  color: "black",
+                  display: "block",
+                  ":hover": {
+                    color: "#712B75",
+                  },
+                }}
               >
                 <Link href={`/${lowerCaseFirstLetter(page)}`} passHref={true}>
                   <Typography variant="h5">
