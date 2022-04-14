@@ -86,6 +86,11 @@ const ResponsiveNavBar = () => {
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
               color="inherit"
+              sx={{
+                ":hover": {
+                  color: "#712B75",
+                },
+              }}
             >
               <MenuIcon />
             </IconButton>
@@ -108,7 +113,15 @@ const ResponsiveNavBar = () => {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                <MenuItem
+                  key={page}
+                  onClick={handleCloseNavMenu}
+                  sx={{
+                    ":hover": {
+                      color: "#712B75",
+                    },
+                  }}
+                >
                   <Link href={`/${lowerCaseFirstLetter(page)}`} passHref={true}>
                     <Typography textAlign="center">{page}</Typography>
                   </Link>
