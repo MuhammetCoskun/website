@@ -1,7 +1,7 @@
 import React from "react";
-import classes from "./Body.module.css";
+import classes from "./HomePageContent.module.css";
 
-const Body: React.FC = () => {
+const HomePageContent: React.FC = () => {
   return (
     <div className={classes["main-body"]}>
       <div>
@@ -14,4 +14,4 @@ const Body: React.FC = () => {
   );
 };
 
-export default Body;
+export default HomePageContent;

@@ -11,6 +11,7 @@ const theme = createTheme({
     fontFamily: ["-apple-system", "BlinkMacSystemFont", "Montserrat"].join(","),
   },
 });
+
 const ProjectCard: React.FC<{
   title: string;
   techs: string;
@@ -19,7 +20,7 @@ const ProjectCard: React.FC<{
 }> = ({ title, techs, codeLink, appLink }) => {
   return (
     <ThemeProvider theme={theme}>
-      <Card sx={{ maxWidth: 500, minWidth: "45%", my: 5, boxShadow: 3 }}>
+      <Card sx={{ maxWidth: 500, minWidth: "40%", m: 2, boxShadow: 3 }}>
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
             <strong>{title}</strong> {/* {title}*/}
