@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import config from "../../config";
-import usePageTitle from "../../../hooks/usePageHeader";
+import usePageTitle from "../../../hooks/usePageTitle";
 
 const Seo: React.FC = () => {
   const { title, description } = config;

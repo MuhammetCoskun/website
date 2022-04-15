@@ -1,6 +1,6 @@
 import React from "react";
 import ProjectCard from "../../src/components/UI/ProjectCard";
-import classes from "./ProjectList.module.css";
+import Box from "@mui/material/Box";
 
 const dummyProject = {
   id: "dummy-id",
@@ -12,12 +12,17 @@ const dummyProject = {
 
 const ProjectList: React.FC = () => {
   return (
-    <div className={classes.container}>
+    <Box
+      sx={{
+        display: "flex",
+        flexWrap: "wrap",
+      }}
+    >
       <ProjectCard {...dummyProject} />
       <ProjectCard {...dummyProject} />
       <ProjectCard {...dummyProject} />
       <ProjectCard {...dummyProject} />
-    </div>
+    </Box>
   );
 };
 

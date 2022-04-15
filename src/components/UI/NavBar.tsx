@@ -11,11 +11,7 @@ import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import Link from "next/link";
 
-const pages = ["About", "Projects", "Contact"];
-
-const lowerCaseFirstLetter = (s: string): string => {
-  return s.charAt(0).toLowerCase() + s.slice(1);
-};
+const pages = ["about", "projects", "contact"];
 
 const ResponsiveNavBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
@@ -122,7 +118,7 @@ const ResponsiveNavBar = () => {
                     },
                   }}
                 >
-                  <Link href={`/${lowerCaseFirstLetter(page)}`} passHref={true}>
+                  <Link href={`/${page}`} passHref={true}>
                     <Typography textAlign="center">{page}</Typography>
                   </Link>
                 </MenuItem>
@@ -151,7 +147,7 @@ const ResponsiveNavBar = () => {
                   },
                 }}
               >
-                <Link href={`/${lowerCaseFirstLetter(page)}`} passHref={true}>
+                <Link href={`/${page}`} passHref={true}>
                   <Typography variant="h5">
                     <strong>{page}</strong>
                   </Typography>

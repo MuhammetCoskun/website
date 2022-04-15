@@ -1,11 +1,11 @@
 import React from "react";
 import ProjectList from "./ProjectList";
-import PageHeader from "./PageHeader";
+import PageHeading from "../../src/components/Layout/PageHeading";
 
 const Projects: React.FC = () => {
   return (
     <>
-      <PageHeader />
+      <PageHeading />
       <ProjectList />
     </>
   );

@@ -6,7 +6,7 @@ const HomePageContent: React.FC = () => {
     <div className={classes["main-body"]}>
       <div>
         <h1>
-          <strong>Hi, I am Muhammet Coskun!</strong>
+          <strong>Hi I&#39;m Muhammet Coskun !</strong>
         </h1>
         <p>Front-end developer.</p>
       </div>
