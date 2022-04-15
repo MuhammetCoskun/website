@@ -1,7 +1,8 @@
 import React from "react";
+import PageHeading from "../../src/components/Layout/PageHeading";
 
 const Contact: React.FC = () => {
-  return <h1>Contact Page</h1>;
+  return <PageHeading />;
 };
 
 export default Contact;

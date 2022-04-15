@@ -1,12 +1,12 @@
 import React from "react";
-import classes from "./Body.module.css";
+import classes from "./HomePageContent.module.css";
 
-const Body: React.FC = () => {
+const HomePageContent: React.FC = () => {
   return (
     <div className={classes["main-body"]}>
       <div>
         <h1>
-          <strong>Hi, I am Muhammet Coskun!</strong>
+          <strong>Hi I&#39;m Muhammet Coskun !</strong>
         </h1>
         <p>Front-end developer.</p>
       </div>
@@ -14,4 +14,4 @@ const Body: React.FC = () => {
   );
 };
 
-export default Body;
+export default HomePageContent;

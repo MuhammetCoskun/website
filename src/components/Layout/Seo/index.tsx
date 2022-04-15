@@ -1,18 +1,15 @@
 import React from "react";
 import Head from "next/head";
 import config from "../../config";
-import { useRouter } from "next/router";
+import usePageTitle from "../../../hooks/usePageTitle";
 
 const Seo: React.FC = () => {
   const { title, description } = config;
-  const router = useRouter();
-  const getPathName = (path: string) => {
-    return path.slice(1).charAt(0).toUpperCase() + path.slice(2); //remove / from pathname and uppercase first letter.
-  };
+  const pageTitle = usePageTitle();
 
   return (
     <Head>
-      <title>{`${getPathName(router.pathname)} ${title}`}</title>
+      <title>{`${pageTitle} ${title}`}</title>
       <meta name="description" content={description} />
       <meta property="og:type" content="website" />
       <meta property="og:title" content={title} />
