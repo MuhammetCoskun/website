@@ -12,6 +12,9 @@ import MenuItem from "@mui/material/MenuItem";
 import Link from "next/link";
 
 const pages = ["about", "projects", "contact"];
+const upperCaseFirstLetter = (s: string): string => {
+  return s.charAt(0).toUpperCase() + s.slice(1);
+};
 
 const ResponsiveNavBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
@@ -119,7 +122,9 @@ const ResponsiveNavBar = () => {
                   }}
                 >
                   <Link href={`/${page}`} passHref={true}>
-                    <Typography textAlign="center">{page}</Typography>
+                    <Typography textAlign="center">
+                      {upperCaseFirstLetter(page)}
+                    </Typography>
                   </Link>
                 </MenuItem>
               ))}
