@@ -1,58 +1,20 @@
 import React from "react";
-import Image from "next/image";
-import * as image from "./mami.jpeg";
-import classes from "./about.module.css";
+import PageHeading from "../../src/components/Layout/PageHeading";
+import Box from "@mui/material/Box";
+import AboutPageContent from "./AboutPageContent";
 
 const About: React.FC = () => {
   return (
-    // <div className={classes.about}>
-    //   <div className={classes.container}>
-    //     <div className={classes.row}>
-    //       <h1>
-    //         <strong>About me,</strong>
-    //       </h1>
-    //     </div>
-    //     <div className={classes.row}>
-    //       <div className={classes.col}>
-    //         <p>
-    //           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-    //           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-    //           enim ad minim veniam, quis nostrud exercitation ull.
-    //         </p>
-    //       </div>
-    //       <div className={classes.col}>
-    //         <Image
-    //           src={image}
-    //           alt="mami"
-    //           width="250"
-    //           height="300"
-    //           style={{ borderRadius: "50%" }}
-    //         />
-    //       </div>
-    //     </div>
-    //   </div>
-    // </div>
-    <div>
-      <div>
-        <h1>About me,</h1>
-      </div>
-      <div>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do //
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut // enim
-          ad minim veniam, quis nostrud exercitation ull
-        </p>
-      </div>
-      <div>
-        <Image
-          src={image}
-          alt="mami"
-          width="250"
-          height="300"
-          style={{ borderRadius: "50%" }}
-        />
-      </div>
-    </div>
+    <Box
+      sx={{
+        display: "flex",
+        justifyContent: "flex-start",
+        flexWrap: "wrap",
+      }}
+    >
+      <PageHeading> me</PageHeading>
+      <AboutPageContent />
+    </Box>
   );
 };
 
